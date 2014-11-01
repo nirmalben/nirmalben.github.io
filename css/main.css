@@ -1,0 +1,151 @@
+@import url('reset.css');
+
+body {
+	background-color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+.text-content {
+	width: 45%;
+	margin: auto;
+}
+
+.caption {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 30px 0px 0px 0px;
+}
+
+.para {
+	margin-top: 10px;
+	font-size: 24px;
+	font-weight: 0;
+}
+
+#flickr-logo {
+	color: #0063dc;
+	font-weight: bold;
+}
+
+#flickr-r-logo {
+	color: #ff0084;
+}
+
+#header, #footer {
+	/*background-color: #181818;*/
+	background-color: #003366;
+	height: 110px;
+	color: #e8e8e8;
+	min-width: 1000px;
+	font-size: 40px;
+}
+
+#header span, #footer span {
+	float: left;
+	margin-top: 25px;
+	margin: 25px 30px 0px 30px;
+}
+
+#twitter-feed-latest {
+	color: #ffffff;
+	float: left;
+	font-size: 32px;
+}
+
+#twitter-feed-widget {
+	display: none;
+}
+
+#social-buttons {
+	margin-right: 50px;
+}
+
+#social-buttons div{
+	background-size: 80px;
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#about { 
+	background: url("../img/bcg_slide-1.jpg") 50% 0 repeat fixed;
+	min-height: 1000px;
+	height: 1000px; 
+	margin: 0 auto; 
+	width: 100%; 
+	max-width: 1920px; 
+	position: relative;
+	min-width: 1000px;
+}
+ 
+#about article { 
+  height: 458px;
+  font-size: 60px;
+  position: absolute; 
+  top: 160px; 
+  width: 100%;
+  color: #000000;
+  text-align: center;
+}
+
+#about article img { 
+  border-style: solid;
+  background-size: 120px;
+  border-radius: 50px;
+}
+
+#programming { 
+	background: url("../img/bcg_slide-2.jpg") 50% 0 repeat fixed;
+ 	min-height: 1000px;
+ 	height: 1000px; 
+	margin: 0 auto; 
+	width: 100%; 
+	max-width: 1920px; 
+	position: relative; 
+	min-width: 1000px;
+
+}
+
+#programming article { 
+  height: 458px;
+  font-size: 100px;
+  position: absolute; 
+  text-align: center; 
+  top: 10px; 
+  width: 100%;
+  color: #ffffff;
+}
+
+#programming article .text-content {
+	text-align: left;
+	margin: 0px 0px 0px 20px;
+}
+
+#photography { 
+	background: url("../img/bcg_slide-3.jpg") 50% 0 repeat fixed;
+ 	min-height: 700px;
+ 	height: 700px; 
+	margin: 0 auto; 
+	width: 100%; 
+	max-width: 1920px; 
+	position: relative; 
+	min-width: 1000px;
+
+}
+
+#photography article { 
+  height: 458px;
+  font-size: 100px;
+  position: absolute; 
+  text-align: center; 
+  top: 50px; 
+  width: 100%;
+  color: #ffffff;
+}
+
+#photography article .text-content {
+	text-align: left;
+	float: right;
+	margin: 0px 20px 0px 0px;
+	width: 32%;
+}
