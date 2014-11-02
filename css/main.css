@@ -45,6 +45,14 @@ body {
 	margin: 25px 30px 0px 30px;
 }
 
+#footer-text {
+	background-color: #333333;
+    color: #e8e8e8;
+    font-size: 14px;
+    margin: auto;
+    text-align: center;
+}
+
 #twitter-feed-latest, #bible-verse {
 	font-size: 32px;
 }
