@@ -2,14 +2,41 @@
 <head>
 	<title>Nirmal</title>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'>
+	<link rel='icon' href='img/favicon.ico' type='image/x-icon'>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript">
-
 		// Create HTML5 elements for IE
-        // document.createElement("article");
-        // document.createElement("section");
-		
+        document.createElement("article");
+        document.createElement("section");
+        
+		$("a#scroll-down-to-section").click(function(e) {
+		    e.preventDefault();
+		    var section = $(this).attr("href");
+		    $("html, body").animate({
+		        scrollTop: $(section).offset().top
+		    });
+		});
+
+		$(document).ready(function(){
+
+			$('section[data-type="background"]').each(function(){
+		      	var $bgobj = $(this); // assigning the object
+		 
+
+			    $(window).scroll(function() {
+			    	var yPos = -($(window).scrollTop() / $bgobj.data('speed')); 
+			            
+				    // Put together our final background position
+				    var coords = '50% '+ yPos + 'px';
+
+				    // Move the background
+				    $bgobj.css({ backgroundPosition: coords });
+				});
+
+		    });
+		});
 	</script>
 </head>
 <body>
@@ -27,8 +54,7 @@
     		</a>
             <script src="http://platform.twitter.com/widgets.js"></script>
         </div>
-
-        <span id="twitter-feed-latest">Loading Today's Bible Verse...</span>
+        <span id="bible-verse">From the Holy Bible, &nbsp; <div id="twitter-feed-latest">(Loading...)</div></span>
 	</div>
 	
 	<section id="about" data-type="background" data-speed="10" class="pages"> 
@@ -49,13 +75,12 @@
 	<section id="programming" data-type="background" data-speed="10" class="pages">
 		 <article>
 		 	<div id="programming-info" class="text-content">
-		 		<div class="caption">Programming</div>
+		 		<div class="caption">
+					<img title="Coding" src="img/coding-icon.png" alt="Coding" />
+		 			Programming
+		 		</div>
 				<div class="para">
 					Programming helps me to think, reason, and develop the logic to solve a given problem. I practice programming by solving various questions/puzzles or by working on my own personal project. By practicing, I get to improve my programming skills and learn a lot.
-				</div>
-				<div class="caption">
-					<img title="Coding Projects" src="img/coding-icon.png" alt="Coding Projects" />
-					Projects - 
 				</div>
 				<div class="caption">
 					<img title="Ruby" src="img/ruby-icon.png" alt="Ruby" />
@@ -86,7 +111,10 @@
 	<section id="photography" data-type="background" data-speed="10" class="pages"> 
 		 <article>
 		 	<div id="photography-info" class="text-content">
-		 		<div class="caption">Photography</div>
+		 		<div class="caption">
+		 			<img title="Photography" src="img/photo-icon.png" alt="photography" />
+		 			Photography
+		 		</div>
 				<div class="para">
 					I started following photography in August 2012 using Nikon D200 and have been using it ever since. So, I am still a rookie and have to learn a lot about photography. For now, I'm just playing around with the camera to capture the perfect picture. On the lower right side of the screen, you can see a slideshow of few of my photos. In order to share my work in photography, I use the online photo sharing website <span id="flickr-logo">flick<span id="flickr-r-logo">r</span></span>. So, feel free to take a look at my picture collection and comment about it.
 				</div>
@@ -137,32 +165,7 @@
 
 
 	<script type="text/javascript">
-		$("a#scroll-down-to-section").click(function(e) {
-		    e.preventDefault();
-		    var section = $(this).attr("href");
-		    $("html, body").animate({
-		        scrollTop: $(section).offset().top
-		    });
-		});
 
-		$(document).ready(function(){
-
-			$('section[data-type="background"]').each(function(){
-		      	var $bgobj = $(this); // assigning the object
-		 
-
-			    $(window).scroll(function() {
-			    	var yPos = -($(window).scrollTop() / $bgobj.data('speed')); 
-			            
-				    // Put together our final background position
-				    var coords = '50% '+ yPos + 'px';
-
-				    // Move the background
-				    $bgobj.css({ backgroundPosition: coords });
-				});
-
-		    });
-		});
 
 		$.getScript('https://platform.twitter.com/widgets.js', function() {
 			//calling method load
@@ -171,14 +174,15 @@
 	    twttr.events.bind(
 			'loaded',
 			function (event) {
-				init();
+				getlatestTweetText();
 			});	
 		});
 
-		function init() {
+		function getlatestTweetText() {
 			var twitterWidgetIframe = document.getElementById("twitter-widget-0").contentDocument;
 			var latestTweet = (twitterWidgetIframe.getElementsByClassName('stream'))[0].children[0].children[0].children[1].children[0].textContent;
 			latestTweetNoDirectLink = latestTweet.substring(0, latestTweet.lastIndexOf("http")); 
+			latestTweetNoDirectLink = "\" " + latestTweetNoDirectLink + "\""
 			$('#twitter-feed-latest').text(latestTweetNoDirectLink);
 		}
 

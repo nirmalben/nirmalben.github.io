@@ -36,20 +36,21 @@ body {
 	/*background-color: #003366;*/
 	height: 110px;
 	color: #e8e8e8;
-	min-width: 1000px;
+	min-width: 1050px;
 	font-size: 40px;
 }
 
 #header span, #footer span {
 	float: left;
-	margin-top: 25px;
 	margin: 25px 30px 0px 30px;
 }
 
-#twitter-feed-latest {
-	color: #ffffff;
-	float: left;
+#twitter-feed-latest, #bible-verse {
 	font-size: 32px;
+}
+
+#twitter-feed-latest {
+	float: right;
 }
 
 #twitter-feed-widget {
@@ -119,6 +120,7 @@ body {
 #programming article .text-content {
 	text-align: left;
 	margin: 0px 0px 0px 20px;
+	width: 50%;
 }
 
 #photography { 
@@ -130,7 +132,6 @@ body {
 	max-width: 1920px; 
 	position: relative; 
 	min-width: 1000px;
-
 }
 
 #photography article { 
