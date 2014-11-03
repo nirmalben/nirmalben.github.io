@@ -1,3 +1,6 @@
+<!-- Thanks to Mohiuddin Parekh for posting an article on creating a simple parallax 
+	scrolling website on Tuts+ - "http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641" -->
+
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,6 +22,7 @@
         document.createElement("article");
         document.createElement("section");
         
+        // For scrolling when clicked the down arrow is clicked (disabled)
 		$("a#scroll-down-to-section").click(function(e) {
 		    e.preventDefault();
 		    var section = $(this).attr("href");
@@ -27,6 +31,7 @@
 		    });
 		});
 
+		// Adjust background image
 		$(document).ready(function(){
 
 			$('section[data-type="background"]').each(function(){
@@ -48,7 +53,9 @@
 	</script>
 </head>
 <body>
+	<!-- HEADER -->
 	<div id="header">
+
 		<!-- BIBLE TWITTER FEED -->
 		<div id="twitter-feed-widget">
             <a class="twitter-timeline" 
@@ -62,9 +69,12 @@
     		</a>
             <script src="http://platform.twitter.com/widgets.js"></script>
         </div>
+
+        <!-- LATEST TWEET -->
         <span id="bible-verse">From the Holy Bible, &nbsp; <div id="twitter-feed-latest">(Loading...)</div></span>
 	</div>
 	
+	<!-- ABOUT -->
 	<section id="about" data-type="background" data-speed="10" class="pages"> 
 		 <article>
 		 	<img title="It's me!" src="img/myself.PNG" alt="My photo" />
@@ -84,6 +94,7 @@
 		 </article>
 	</section>   
      
+     <!-- PROGRAMMING -->
 	<section id="programming" data-type="background" data-speed="10" class="pages">
 		 <article>
 		 	<div id="programming-info" class="text-content">
@@ -121,6 +132,7 @@
 		 </article>
 	</section>
 
+	<!-- PHOTOGRAPHY -->
 	<section id="photography" data-type="background" data-speed="10" class="pages"> 
 		 <article>
 		 	<div id="photography-info" class="text-content">
@@ -135,6 +147,7 @@
 		 </article>
 	</section>
 
+	<!-- FOOTER -->
 	<div id="footer">
 		<span>Let's get connected -</span>
 		<div id="social-buttons">
@@ -184,14 +197,16 @@
 		$.getScript('https://platform.twitter.com/widgets.js', function() {
 			//calling method load
 			twttr.widgets.load();
-		
-	    twttr.events.bind(
-			'loaded',
-			function (event) {
-				getlatestTweetText();
-			});	
+			
+			// Get the latest tweet after the widget is loaded
+	    	twttr.events.bind(
+				'loaded',
+				function (event) {
+					getlatestTweetText();
+				});	
 		});
 
+		// Function to get the latest tweet using javascript
 		function getlatestTweetText() {
 			var twitterWidgetIframe = document.getElementById("twitter-widget-0").contentDocument;
 			var latestTweet = (twitterWidgetIframe.getElementsByClassName('stream'))[0].children[0].children[0].children[1].children[0].textContent;
