@@ -36,10 +36,11 @@
 
 			$('section[data-type="background"]').each(function(){
 		      	var $bgobj = $(this); // assigning the object
-		 
+		 		
+		 		var $window = $(window);
 
-			    $(window).scroll(function() {
-			    	var yPos = -($(window).scrollTop() / $bgobj.data('speed')); 
+			    $window.scroll(function() {
+			    	var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
 			            
 				    // Put together our final background position
 				    var coords = '50% '+ yPos + 'px';
@@ -77,7 +78,7 @@
 	<!-- ABOUT -->
 	<section id="about" data-type="background" data-speed="10" class="pages"> 
 		 <article>
-		 	<img title="It's me!" src="img/myself.PNG" alt="My photo" />
+		 	<img title="It's me!" src="img/myself.JPG" alt="My photo" />
 		 	<div class="text-content">
 		 		<div class="caption">Hi! I'm Nirmal.</div>
 				<div class="para">
@@ -103,7 +104,7 @@
 		 			Programming
 		 		</div>
 				<div class="para">
-					Programming helps me to think, reason, and develop the logic to solve a given problem. I practice programming by solving various questions/puzzles <br>
+					Programming helps me to think, reason, and develop the logic to solve a given problem. I practice programming by solving various questions/puzzles
 					(ex. Hackerrank) or by working on my own personal projects (few are listed below). 
 				</div>
 				<div class="caption">
