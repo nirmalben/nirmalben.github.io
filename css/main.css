@@ -72,7 +72,11 @@ body {
 }
 
 #about { 
-	background: url("../img/bcg_slide-1.JPG") 50% 0 repeat fixed;
+	background: url("../img/bcg_slide-1.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	min-height: 1000px;
 	height: 1000px; 
 	margin: 0 auto; 
@@ -99,7 +103,11 @@ body {
 }
 
 #programming { 
-	background: url("../img/bcg_slide-2.JPG") 50% 0 repeat fixed;
+	background: url("../img/bcg_slide-2.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
  	min-height: 1000px;
  	height: 1000px; 
 	margin: 0 auto; 
@@ -127,7 +135,11 @@ body {
 }
 
 #photography { 
-	background: url("../img/bcg_slide-3.JPG") 50% 0 repeat fixed;
+	background: url("../img/bcg_slide-3.JPG") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
  	min-height: 700px;
  	height: 700px; 
 	margin: 0 auto; 
