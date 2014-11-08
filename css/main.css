@@ -67,8 +67,12 @@ body {
 	background-size: 80px;
 	display: inline-block;
 	margin-top: 20px;
-	margin-left: 5px;
+	margin-left: 10px;
 	margin-bottom: 20px;
+}
+
+#social-buttons img {
+	border-radius: 20px;
 }
 
 #about { 
