@@ -1,2 +1,2 @@
-mygithubpage
+nirmal.me
 ============
