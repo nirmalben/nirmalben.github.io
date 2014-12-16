@@ -30,7 +30,40 @@
 		        scrollTop: $(section).offset().top
 		    });
 		});
-		
+
+		$(document).ready(function() {
+			var d = new Date();
+			var month = d.getMonth()+1;
+			switch (month) {
+				case 1:
+					month = "January"; break;
+				case 2:
+					month = "February"; break;
+				case 3:
+					month = "March"; break;
+				case 4:
+					month = "April"; break;
+				case 5:
+					month = "May"; break;
+				case 6:
+					month = "June"; break;
+				case 7:
+					month = "July"; break;
+				case 8:
+					month = "August"; break;
+				case 9:
+					month = "September"; break;
+				case 10:
+					month = "October"; break;
+				case 11:
+					month = "November"; break;
+				case 12:
+					month = "December"; break;
+			}
+			var day = d.getDate();
+			var output = day + " " + month + ", " + d.getFullYear();
+			$(".currentDate").text(output);
+		});
 	</script>
 </head>
 <body>
@@ -54,7 +87,7 @@
         <!-- LATEST TWEET -->
         <span id="bible-verse">
         	<img id="bible-icon" title="Holy Bible" src="img/holy-bible-icon.png" alt="Holy Bible" />
-        	From the Holy Bible, &nbsp; 
+        	Holy Bible verse for <text class="currentDate"></text> (from @dailybible twitter feed) -
         	<div id="twitter-feed-latest">(Loading...)</div>
         </span>
 	</div>
