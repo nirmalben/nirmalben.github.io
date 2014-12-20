@@ -1,217 +1,165 @@
-<!-- Thanks to Mohiuddin Parekh for posting an article on creating a simple parallax 
-	scrolling website on Tuts+ - "http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641" -->
-
+<!DOCTYPE HTML>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Nirmal, Joshi, Benann, Rajendra, njbenann, uwaterloo, ECE, 2016" />
-    <meta name="description" content="Nirmal's Personal Website" />
-    <meta name="author" content="Nirmal Benann" />
-    <meta name="robots" content="all" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <meta name="keywords" content="Nirmal, Joshi, Benann, Rajendra, njbenann, uwaterloo, ECE, 2016" />
+	    <meta name="description" content="Nirmal's Personal Website" />
+	    <meta name="author" content="Nirmal Benann" />
+	    <meta name="robots" content="all" />
 
-	<title>Nirmal</title>
+		<title>Nirmal</title>
 
-	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'>
-	<link rel='icon' href='img/favicon.ico' type='image/x-icon'>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'>
+		<link rel='icon' href='img/favicon.ico' type='image/x-icon'>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript">
-		// Create HTML5 elements for IE
-        document.createElement("article");
-        document.createElement("section");
-        
-        // For scrolling when clicked the down arrow is clicked (disabled)
-		$("a#scroll-down-to-section").click(function(e) {
-		    e.preventDefault();
-		    var section = $(this).attr("href");
-		    $("html, body").animate({
-		        scrollTop: $(section).offset().top
-		    });
-		});
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/stellar.min.js"></script>
+		<script type="text/javascript" src="js/waypoints.min.js"></script>
+		<script type="text/javascript" src="js/easing.1.3.js"></script>
+	</head>
 
-		$(document).ready(function() {
-			var d = new Date();
-			var month = d.getMonth()+1;
-			switch (month) {
-				case 1:
-					month = "January"; break;
-				case 2:
-					month = "February"; break;
-				case 3:
-					month = "March"; break;
-				case 4:
-					month = "April"; break;
-				case 5:
-					month = "May"; break;
-				case 6:
-					month = "June"; break;
-				case 7:
-					month = "July"; break;
-				case 8:
-					month = "August"; break;
-				case 9:
-					month = "September"; break;
-				case 10:
-					month = "October"; break;
-				case 11:
-					month = "November"; break;
-				case 12:
-					month = "December"; break;
-			}
-			var day = d.getDate();
-			var output = day + " " + month + ", " + d.getFullYear();
-			$(".currentDate").text(output);
-		});
-	</script>
-</head>
-<body>
-	<!-- HEADER -->
-	<div id="header">
+	<body>
+		<div id="header-cont">
+			<div id="header">
+				<div id="twitter-feed-widget" class="hide">
+		            <a class="twitter-timeline" 
+		            	href="https://twitter.com/Daily_Bible" 
+		            	data-tweet-limit="1" 
+		            	data-theme="light" 
+		    			data-link-color="#2393aa" 
+		    			data-chrome="noheader nofooter noborders noscrollbar" 
+		    			data-widget-id="546156239923970048">
+		    			Tweets by @Daily_Bible
+		    		</a>
+		            <script src="http://platform.twitter.com/widgets.js"></script>
+		        </div>
 
-		<!-- BIBLE TWITTER FEED -->
-		<div id="twitter-feed-widget">
-            <a class="twitter-timeline" 
-            	href="https://twitter.com/dailybible" 
-            	data-tweet-limit="1" 
-            	data-theme="light" 
-    			data-link-color="#2393aa" 
-    			data-chrome="noheader nofooter noborders noscrollbar" 
-    			data-widget-id="508645175950716928">
-    			Tweets by @dailybible
-    		</a>
-            <script src="http://platform.twitter.com/widgets.js"></script>
-        </div>
+		        <span id="bible-verse" class="floatLeft">
+		        	<img id="bible-icon" class="floatLeft" title="Holy Bible" src="img/holy-bible-icon.png" alt="Holy Bible" />
+		        	<div id="twitter-feed-latest">(Loading...)</div>
+		        </span>
 
-        <!-- LATEST TWEET -->
-        <span id="bible-verse">
-        	<img id="bible-icon" title="Holy Bible" src="img/holy-bible-icon.png" alt="Holy Bible" />
-        	Holy Bible verse for <text class="currentDate"></text> (from @dailybible twitter feed) -
-        	<div id="twitter-feed-latest">(Loading...)</div>
-        </span>
-	</div>
-	
-	<!-- ABOUT -->
-	<section id="about" data-type="background" data-speed="10" class="pages"> 
-		 <article>
-		 	<img title="It's me!" src="img/myself.JPG" alt="My photo" />
-		 	<div class="text-content">
-		 		<div class="caption">Hi! I'm Nirmal.</div>
-				<div class="para">
-					<strong>Third year undergrad</strong> in <strong>Computer Engineering</strong> <br>
-					at the <br>
-					<strong>University Of Waterloo</strong> <br>
-					passionate about <br>
-					<strong>Programming</strong>, <strong>Technology</strong>, <strong>Photography</strong> and <strong>Football</strong>.
+		        <div id="social-buttons" class="floatRight">
+					<div class="inlineBlock">
+					    <a href="http://ca.linkedin.com/pub/nirmal-benann/41/204/ba3" target="_blank">
+					        <img title="LinkedIn" src="img/linkedin-icon.png" alt="LinkedIn" />
+					    </a>
+				    </div>
+					<div class="inlineBlock">
+						<a href="https://www.facebook.com/Nirmal.9.4/" target="_blank">
+				        	<img title="Facebook" src="img/facebook-icon.png" alt="Facebook" />
+				    	</a>
+			    	</div>
+			    	<div class="inlineBlock">
+					    <a href="https://plus.google.com/u/0/111233998314393255498/about" target="_blank">
+					        <img title="Google+" src="img/googleplus-icon.png" alt="googleplus" />
+					    </a>
+				    </div>
+				    <div class="inlineBlock">
+					    <a href="https://twitter.com/NirmalBen" target="_blank">
+					        <img title="Twitter" src="img/twitter-icon.png" alt="twitter" />
+					    </a>
+				    </div>
+				    <div class="inlineBlock">
+					    <a href="http://www.flickr.com/photos/85939692@N05/" target="_blank">
+					        <img title="flickr" src="img/flickr-icon.png" alt="flickr" />
+					    </a>
+				    </div>
+				    <div class="inlineBlock">
+					    <a href="https://github.com/nirmalj23/" target="_blank">
+					        <img title="GitHub" src="img/github-icon.png" alt="github" />
+					    </a>
+				    </div>
 				</div>
-		 	</div>
-		 	<!-- <a href="#programming" id="scroll-down-to-section">
-		 		<img title="Scroll down" src="img/down-arrow.png" alt="Keep scrolling down..." />
-		 	</a> -->	
-		 </article>
-	</section>   
-     
-     <!-- PROGRAMMING -->
-	<section id="programming" data-type="background" data-speed="10" class="pages">
-		 <article>
-		 	<div id="programming-info" class="text-content">
-		 		<div class="caption">
-					<img title="Coding" src="img/coding-icon.png" alt="Coding" />
-		 			Programming
-		 		</div>
-				<div class="para">
-					Programming helps me to think, reason, and develop the logic to solve a given problem. I practice programming by solving various questions/puzzles
-					(ex. hackerrank.com) or by working on my own personal projects (few are listed below). 
-				</div>
-				<div class="caption">
-					<img title="Ruby" src="img/ruby-icon.png" alt="(Ruby)" />
-					JobMine Website Scraper
-				</div>
-				<div class="para">
-					JobMine is a web application developed by the University Of Waterloo to help students with the co-op/internship process. The JobMine Website Scraper is a ruby script that scrapes the interview list on a given JobMine account page and sends alerts through SMS/e-mail when a new interview is scheduled.  (The code is under a private repo on my GitHub)
-				</div>
-				<div class="caption">
-					<img title="Java" src="img/java-icon.png" alt="(Java)" />
-					Metric System Prefix Converter
-				</div>
-				<div class="para">
-					Android app that can be used for conversions between various metric system prefixes. (100+ downloads on Google Play)
-				</div>
-				<div class="caption">
-					<img title="C#" src="img/cs-icon.png" alt="(C#)" />
-					Library application
-				</div>
-				<div class="para">
-					C# windows application to maintain inventory for my personal collection of books.
-				</div>
-		 	</div>
-		 	<br>
-		 </article>
-	</section>
 
-	<!-- PHOTOGRAPHY -->
-	<section id="photography" data-type="background" data-speed="10" class="pages"> 
-		 <article>
-		 	<div id="photography-info" class="text-content">
-		 		<div class="caption">
-		 			<img title="Photography" src="img/photo-icon.png" alt="photography" />
-		 			Photography
-		 		</div>
-				<div class="para">
-					I started following photography in August 2012 using Nikon D200 and have been using it ever since. So, I am still a rookie and have to learn a lot about photography. For now, I'm just playing around with the camera to capture the perfect picture. In order to share my work in photography, I use <strong><u>flickr</u></strong>, the online photo sharing website. So, feel free to take a look at my picture collection and comment about it.
+		        <div class="navigation floatLeft">
+			        <ul>
+						<li data-slide="1" class="inlineBlock">
+							<img title="About" src="img/about-icon.png" alt="About" />
+							Intro
+						</li>
+						<li data-slide="2" class="inlineBlock">
+							<img title="Coding" src="img/coding-icon.png" alt="Coding" />
+							Coding
+						</li>
+						<li data-slide="3" class="inlineBlock">
+							<img title="Photography" src="img/photo-icon.png" alt="photography" />
+							Photography
+						</li>
+					</ul>
 				</div>
-		 	</div>	
-		 </article>
-	</section>
-
-	<!-- FOOTER -->
-	<div id="footer">
-		<span>Let's get connected -</span>
-		<div id="social-buttons">
-			<div>
-			    <a href="http://ca.linkedin.com/pub/nirmal-benann/41/204/ba3" target="_blank">
-			        <img title="LinkedIn" src="img/linkedin-icon.png" alt="LinkedIn" />
-			    </a>
-		    </div>
-			<div>
-				<a href="https://www.facebook.com/Nirmal.9.4/" target="_blank">
-		        	<img title="Facebook" src="img/facebook-icon.png" alt="Facebook" />
-		    	</a>
-	    	</div>
-	    	<div>
-			    <a href="https://plus.google.com/u/0/111233998314393255498/about" target="_blank">
-			        <img title="Google+" src="img/googleplus-icon.png" alt="googleplus" />
-			    </a>
-		    </div>
-		    <div>
-			    <a href="https://twitter.com/NirmalBen" target="_blank">
-			        <img title="Twitter" src="img/twitter-icon.png" alt="twitter" />
-			    </a>
-		    </div>
-		    <div>
-			    <a href="http://www.flickr.com/photos/85939692@N05/" target="_blank">
-			        <img title="flickr" src="img/flickr-icon.png" alt="flickr" />
-			    </a>
-		    </div>
-		    <div>
-			    <a href="https://github.com/nirmalj23/" target="_blank">
-			        <img title="GitHub" src="img/github-icon.png" alt="github" />
-			    </a>
-		    </div>
-		    <div>
-			    <a href="https://play.google.com/store/apps/developer?id=Nirmal&hl=en" target="_blank">
-			        <img title="Google Play" src="img/googleplay-icon.png" alt="playstore" />
-			    </a>
-		    </div>
+			</div>
 		</div>
-		<div id="footer-text">Copyright © 2014+ Nirmal Benann</div>
-	</div>
 
+		<div class="slide" id="intro" data-slide="1" data-stellar-background-ratio="0.5">
+			<article>
+				<img title="It's me!" src="img/myself.JPG" alt="My photo" />
+			 	<div class="text-content">
+			 		<div class="caption">Hi! I'm Nirmal.</div>
+					<div class="para">
+						Third year undergrad in Computer Engineering <br>
+						at the <br>
+						University Of Waterloo <br>
+						passionate about <br>
+						Coding, Technology, Photography and Football.
+					</div>
+			 	</div>
+		 	</article>
+		 	<span class="slideTitle">Intro</span>
+		</div>
 
-	<script type="text/javascript">
+		<div class="slide" id="coding" data-slide="2" data-stellar-background-ratio="0.5">
+			<article>
+			 	<div id="coding-info" class="text-content">
+					<div class="para">
+						Coding helps me to think, reason, and develop the logic to solve a given problem. I practice coding by solving various questions/puzzles
+						(ex. hackerrank.com) or by working on my own personal projects (few are listed below). 
+					</div>
+					<div class="caption">
+						<img title="Ruby" src="img/ruby-icon.png" alt="(Ruby)" />
+						JobMine Website Scraper
+					</div>
+					<div class="para">
+						JobMine is a web application developed by the University Of Waterloo to help students with the co-op/internship process. The JobMine Website Scraper is a ruby script that scrapes the interview list on a given JobMine account page and sends alerts through SMS/e-mail when a new interview is scheduled.  (The code is under a private repo on my GitHub)
+					</div>
+					<div class="caption">
+						<img title="Android" src="img/android-icon.png" alt="(Android)" />
+						<span>Metric System Prefix Converter</span>
+					</div>
+					<div class="para">
+						Android app that can be used for conversions between various metric system prefixes. (100+ downloads on Google Play)
+					    <span>
+						    <a href="https://play.google.com/store/apps/details?id=app.metricprefixconvertor" target="_blank">
+						        <img title="Link to the app" src="img/googleplay-icon.png" alt="link" />
+						    </a>
+					    </span>
+					</div>
+			 	</div>
+			 	<br>
+			</article>
+			<span class="slideTitle">Coding</span>
+		</div>
 
+		<div class="slide" id="photography" data-slide="3" data-stellar-background-ratio="0.5">
+			<article>
+			 	<div id="photography-info" class="text-content">
+					<div class="para">
+						I started following photography in August 2012 using Nikon D200 and have been using it ever since. So, I am still a rookie and have to learn a lot about photography. For now, I'm just playing around with the camera to capture the perfect picture. In order to share my work in photography, I use <strong><u>flickr</u></strong>, the online photo sharing website. So, feel free to take a look at my picture collection and comment about it.
+					</div>
+			 	</div>	
+			</article>
+			<span class="slideTitle">Photography</span>
+		</div>
 
+		<div id="footer">
+			<div id="footer-text">Copyright © 2014+ Nirmal Benann</div>
+		</div>
+
+		<script type="text/javascript">
 		$.getScript('https://platform.twitter.com/widgets.js', function() {
 			//calling method load
 			twttr.widgets.load();
@@ -232,7 +180,6 @@
 			latestTweetNoDirectLink = "\" " + latestTweetNoDirectLink + "\""
 			$('#twitter-feed-latest').text(latestTweetNoDirectLink);
 		}
-
-	</script>
-</body>
+		</script>
+	</body>
 </html>
