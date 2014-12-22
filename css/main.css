@@ -22,7 +22,6 @@ html, body {
 }
 
 .text-content {
-	width: 100%;
 	margin: auto;
 }
 
@@ -117,48 +116,39 @@ html, body {
 }
 
 #intro { 
-	background: url("../img/bcg_slide-1.JPG") no-repeat fixed;
+	background: url("../img/bcg_slide-1.JPG");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin: 0 auto; 
-	width: 100%; 
-	max-width: 1920px; 
-	position: relative;
-	min-width: 1000px;
 }
  
 #intro article { 
-	font-size: 60px;
 	position: absolute; 
-	top: 20%; 
-	width: 100%;
+	top: 25%;
+	left: 33%; 
 	color: #000000;
-	text-align: center;
 }
 
 #intro article img { 
 	border-style: solid;
-	background-size: 120px;
-	border-radius: 80px;
+	border-radius: 10px;
+}
+
+#intro article .text-content { 
+	margin: 5px 0px 0px 30px;
+	width: 40%;
 }
 
 #coding { 
-	background: url("../img/bcg_slide-2.JPG") no-repeat fixed;
+	background: url("../img/bcg_slide-2.JPG");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin: 0 auto; 
-	width: 100%; 
-	max-width: 1920px; 
-	position: relative; 
-	min-width: 1000px;
 }
 
 #coding article { 
-	font-size: 100px;
 	position: absolute; 
 	top: 10%; 
 	width: 100%;
@@ -176,16 +166,11 @@ html, body {
 }
 
 #photography { 
-	background: url("../img/bcg_slide-3.JPG") no-repeat fixed;
+	background: url("../img/bcg_slide-3.JPG");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin: 0 auto; 
-	width: 100%; 
-	max-width: 1920px; 
-	position: relative; 
-	min-width: 1000px;
 }
 
 #photography article { 
@@ -204,7 +189,7 @@ html, body {
 }
 
 .slide{
-	/*background-attachment: fixed;*/
+	background-attachment: fixed;
 	width:100%;
 	height:100%;
 	position: relative;
