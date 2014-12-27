@@ -125,8 +125,9 @@ html, body {
  
 #intro article { 
 	position: absolute; 
-	top: 25%;
-	left: 33%; 
+	top: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
 	color: #000000;
 }
 
@@ -137,8 +138,8 @@ html, body {
 }
 
 #intro article .text-content { 
-	margin: 5px 0px 0px 30px;
-	width: 30%;
+	margin: 25px 0px 0px 25px;
+	width: 50%;
 	/**/
 	border: 1px solid #e8e8e8;
 	padding: 20px;
@@ -157,7 +158,9 @@ html, body {
 
 #coding article { 
 	position: absolute; 
-	top: 10%;
+	top: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
 	width: 100%;
 	color: #ffffff;
 }
@@ -189,7 +192,9 @@ html, body {
 #photography article { 
 	font-size: 100px;
 	position: absolute; 
-	top: 15%; 
+	top: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
 	width: 100%;
 	color: #ffffff;
 }
