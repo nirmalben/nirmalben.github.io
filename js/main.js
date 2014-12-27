@@ -31,7 +31,8 @@ $(document).ready(function () {
 
         $('#intro article .text-content, #coding article .text-content, #photography article .text-content').css({
            'float':'none',
-           'width':'100%' 
+           'width':'100%',
+           'left':'auto'  
         });
 
         // Intro section
