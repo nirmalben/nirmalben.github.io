@@ -22,11 +22,11 @@ $(document).ready(function () {
 
     if (isMobile.any()) {
         $('.para').css({
-            'font-size':'36px;'
+            'font-size':'36px'
         });
 
         $('.caption').css({
-            'font-size':'58px;'
+            'font-size':'58px'
         });
 
         // Intro section
