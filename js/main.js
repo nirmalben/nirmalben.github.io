@@ -21,20 +21,29 @@ $(document).ready(function () {
     };
 
     if (isMobile.any()) {
+        // Intro section
         $('#intro').css({
             'background-image':'none',
             'background-color':'#FFE658'
         });
 
+        // Coding section
         $('#coding').css({
             'background-image':'none',
             'background-color':'#B71427'
         });
+        $('#coding article .text-content').css({
+            'text-align': 'center';
+        })
 
+        // Photography section
         $('#photography').css({
             'background-image':'none',
             'background-color':'#404040'
         });
+        $('#photography article .text-content').css({
+            'text-align': 'center';
+        })
     }
 
     $(window).stellar();
