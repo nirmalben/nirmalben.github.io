@@ -1,8 +1,8 @@
 html, body {
  	background-color: #181818;
 	font-family: 'Raleway', sans-serif;
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
 .floatLeft {
@@ -62,7 +62,7 @@ html, body {
 }
 
 #bible-verse {
-	width: 65%;
+	width: 60%;
 	padding: 10px 0px 0px 10px;
 }
 
