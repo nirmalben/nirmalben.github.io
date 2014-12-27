@@ -22,6 +22,7 @@ $(document).ready(function () {
 
     if (isMobile.any()) {
         $('#intro').css({
+            'background':'none'
             'background-color':'#FFE658'
         });
     }
