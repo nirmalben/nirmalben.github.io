@@ -29,6 +29,11 @@ $(document).ready(function () {
             'font-size':'58px'
         });
 
+        $('#intro article .text-content, #coding article .text-content, #photography article .text-content').css({
+           'float':'none',
+           'width':'100%' 
+        });
+
         // Intro section
         $('#intro').css({
             'background-image':'none',
