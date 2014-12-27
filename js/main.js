@@ -33,7 +33,8 @@ $(document).ready(function () {
             'background-color':'#B71427'
         });
         $('#coding article .text-content').css({
-            'text-align': 'center';
+            'top': '50%',
+            'left': '50%'
         })
 
         // Photography section
@@ -42,7 +43,8 @@ $(document).ready(function () {
             'background-color':'#404040'
         });
         $('#photography article .text-content').css({
-            'text-align': 'center';
+            'top': '50%',
+            'left': '50%'
         })
     }
 
