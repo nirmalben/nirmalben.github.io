@@ -32,10 +32,10 @@ $(document).ready(function () {
             'background-image':'none',
             'background-color':'#B71427'
         });
-        $('#coding article .text-content').css({
+        $('#coding article').css({
             'top': '50%',
             'left': '50%'
-        })
+        });
 
         // Photography section
         $('#photography').css({
@@ -45,7 +45,7 @@ $(document).ready(function () {
         $('#photography article .text-content').css({
             'top': '50%',
             'left': '50%'
-        })
+        });
     }
 
     $(window).stellar();
