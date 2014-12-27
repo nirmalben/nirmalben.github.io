@@ -32,7 +32,7 @@ html, body {
 
 .para {
 	margin-top: 10px;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: normal;
 	line-height: 35px;
 }
@@ -133,15 +133,23 @@ html, body {
 #intro article img { 
 	border-style: solid;
 	border-radius: 10px;
+	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);//
 }
 
 #intro article .text-content { 
 	margin: 5px 0px 0px 30px;
 	width: 40%;
+	//
+	border: 1px solid #e8e8e8;
+	padding: 20px;
+	border-radius: 10px;	
+	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+	//
 }
 
 #coding { 
-	background: url("../img/bcg_slide-2.JPG");
+	/*background: url("../img/bcg_slide-2.JPG");*/
+	background-color: #B71427;//
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -159,6 +167,12 @@ html, body {
 	text-align: left;
 	margin: 0px 0px 0px 20px;
 	width: 50%;	
+	//
+	border: 1px solid #e8e8e8;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+	//
 }
 
 #coding article img{
@@ -166,7 +180,8 @@ html, body {
 }
 
 #photography { 
-	background: url("../img/bcg_slide-3.JPG");
+	/*background: url("../img/bcg_slide-3.JPG");*/
+	background-color: #404040;//
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -186,6 +201,12 @@ html, body {
 	float: right;
 	margin: 0px 20px 0px 0px;
 	width: 32%;
+	//
+	border: 1px solid #e8e8e8;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+	//
 }
 
 .slide{
