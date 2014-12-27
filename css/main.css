@@ -138,7 +138,7 @@ html, body {
 
 #intro article .text-content { 
 	margin: 5px 0px 0px 30px;
-	width: 40%;
+	width: 30%;
 	/**/
 	border: 1px solid #e8e8e8;
 	padding: 20px;
@@ -157,7 +157,7 @@ html, body {
 
 #coding article { 
 	position: absolute; 
-	top: 10%; 
+	top: 10%;
 	width: 100%;
 	color: #ffffff;
 }

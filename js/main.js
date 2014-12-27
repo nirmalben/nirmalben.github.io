@@ -33,7 +33,6 @@ $(document).ready(function () {
             'background-color':'#B71427'
         });
         $('#coding article').css({
-            'top': '50%',
             'left': '50%'
         });
 
@@ -41,10 +40,6 @@ $(document).ready(function () {
         $('#photography').css({
             'background-image':'none',
             'background-color':'#404040'
-        });
-        $('#photography article .text-content').css({
-            'top': '50%',
-            'left': '50%'
         });
     }
 
