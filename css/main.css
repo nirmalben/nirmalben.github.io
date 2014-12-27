@@ -125,9 +125,8 @@ html, body {
  
 #intro article { 
 	position: absolute; 
-	top: 50%;
-	left: 50%; 
-	transform: translate(-50%, -50%);
+	top: 25%;
+	left: 33%; 
 	color: #000000;
 }
 
@@ -138,14 +137,15 @@ html, body {
 }
 
 #intro article .text-content { 
-	margin: 25px 0px 0px 25px;
-	width: 50%;
-	/**/
+	margin: 5px 0px 0px 30px;
+	width: 30%;
+	min-width: 300px;
+	/*
 	border: 1px solid #e8e8e8;
 	padding: 20px;
 	border-radius: 10px;	
 	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-	/**/
+	*/
 }
 
 #coding { 
@@ -158,9 +158,7 @@ html, body {
 
 #coding article { 
 	position: absolute; 
-	top: 50%;
-	left: 50%; 
-	transform: translate(-50%, -50%);
+	top: 10%;
 	width: 100%;
 	color: #ffffff;
 }
@@ -169,12 +167,6 @@ html, body {
 	text-align: left;
 	margin: 0px 0px 0px 20px;
 	width: 50%;	
-	/**/
-	border: 1px solid #e8e8e8;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-	/**/
 }
 
 #coding article img{
@@ -192,9 +184,7 @@ html, body {
 #photography article { 
 	font-size: 100px;
 	position: absolute; 
-	top: 50%;
-	left: 50%; 
-	transform: translate(-50%, -50%);
+	top: 15%; 
 	width: 100%;
 	color: #ffffff;
 }
@@ -204,12 +194,6 @@ html, body {
 	float: right;
 	margin: 0px 20px 0px 0px;
 	width: 32%;
-	/**/
-	border: 1px solid #e8e8e8;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-	/**/
 }
 
 .slide{
