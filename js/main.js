@@ -35,6 +35,10 @@ $(document).ready(function () {
            'left':'auto'  
         });
 
+        $('#intro article, #coding article, #photography article').css({
+           'left':'auto'  
+        });
+
         // Intro section
         $('#intro').css({
             'background-image':'none',
