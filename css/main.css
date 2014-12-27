@@ -148,8 +148,7 @@ html, body {
 }
 
 #coding { 
-	/*background: url("../img/bcg_slide-2.JPG");*/
-	background-color: #B71427;//
+	background: url("../img/bcg_slide-2.JPG");	
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -180,8 +179,7 @@ html, body {
 }
 
 #photography { 
-	/*background: url("../img/bcg_slide-3.JPG");*/
-	background-color: #404040;//
+	background: url("../img/bcg_slide-3.JPG");	
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

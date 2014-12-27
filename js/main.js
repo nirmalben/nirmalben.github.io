@@ -25,6 +25,16 @@ $(document).ready(function () {
             'background-image':'none',
             'background-color':'#FFE658'
         });
+
+        $('#coding').css({
+            'background-image':'none',
+            'background-color':'#B71427'
+        });
+
+        $('#photography').css({
+            'background-image':'none',
+            'background-color':'#404040'
+        });
     }
 
     $(window).stellar();
