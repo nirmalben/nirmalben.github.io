@@ -21,6 +21,14 @@ $(document).ready(function () {
     };
 
     if (isMobile.any()) {
+        $('.para').css({
+            'font-size':'36px;'
+        });
+
+        $('.caption').css({
+            'font-size':'58px;'
+        });
+
         // Intro section
         $('#intro').css({
             'background-image':'none',
@@ -33,7 +41,7 @@ $(document).ready(function () {
             'background-color':'#B71427'
         });
         $('#coding article').css({
-            'top': '50%'
+            
         });
 
         // Photography section
