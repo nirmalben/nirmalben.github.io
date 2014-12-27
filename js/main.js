@@ -33,7 +33,7 @@ $(document).ready(function () {
             'background-color':'#B71427'
         });
         $('#coding article').css({
-            'left': '33%'
+            'top': '50%'
         });
 
         // Photography section
