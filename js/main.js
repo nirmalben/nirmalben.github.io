@@ -13,7 +13,7 @@ function react_to_window() {
     } else {
         if (stellarActivated == false) {
 
-            $.stellar({
+            $(window).stellar({
                horizontalScrolling: false
            });
             
@@ -25,7 +25,8 @@ function react_to_window() {
 
 
 $(document).ready(function () {
-    react_to_window();
+    // react_to_window();
+    // $(window).stellar();
 
     var links = $('.navigation').find('li');
     slide = $('.slide');

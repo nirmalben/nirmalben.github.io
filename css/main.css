@@ -180,13 +180,12 @@ html, body {
 	position: absolute; 
 	top: 15%; 
 	width: 100%;
-	color: #ffffff;
+	color: #000000;
 }
 
 #photography article .text-content {
-	text-align: left;
-	float: right;
-	margin: 0px 20px 0px 0px;
+	float: left;
+	margin: 0px 0px 0px 20px;
 	width: 32%;
 }
 
@@ -208,5 +207,5 @@ html, body {
 }
 
 #coding .slideTitle {
-	color: #e8e8e8;
+	color: #ffffff;
 }
