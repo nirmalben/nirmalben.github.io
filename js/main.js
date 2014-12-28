@@ -1,5 +1,31 @@
+var stellarActivated = false;
+
+$(window).resize(function() {
+    react_to_window();
+});
+
+function react_to_window() {
+    if ($(window).width() <= 1024) {
+        if (stellarActivated == true) {
+            $(window).data('plugin_stellar').destroy();
+            stellarActivated = false;
+        }
+    } else {
+        if (stellarActivated == false) {
+
+            $.stellar({
+               horizontalScrolling: false
+           });
+            
+            $(window).data('plugin_stellar').init();
+            stellarActivated = true;
+        }
+    }
+}
+
+
 $(document).ready(function () {
-    $(window).stellar();
+    react_to_window();
 
     var links = $('.navigation').find('li');
     slide = $('.slide');
