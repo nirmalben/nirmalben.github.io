@@ -1,32 +1,33 @@
-var stellarActivated = false;
 
-$(window).resize(function() {
-    react_to_window();
-});
+// Stellar is disabled for now
+// var stellarActivated = false;
 
-function react_to_window() {
-    if ($(window).width() <= 1024) {
-        if (stellarActivated == true) {
-            $(window).data('plugin_stellar').destroy();
-            stellarActivated = false;
-        }
-    } else {
-        if (stellarActivated == false) {
+// $(window).resize(function() {
+//     react_to_window();
+// });
 
-            $(window).stellar({
-               horizontalScrolling: false
-           });
+// function react_to_window() {
+//     if ($(window).width() <= 1024) {
+//         if (stellarActivated == true) {
+//             $(window).data('plugin_stellar').destroy();
+//             stellarActivated = false;
+//         }
+//     } else {
+//         if (stellarActivated == false) {
+
+//             $(window).stellar({
+//                horizontalScrolling: false
+//            });
             
-            $(window).data('plugin_stellar').init();
-            stellarActivated = true;
-        }
-    }
-}
+//             $(window).data('plugin_stellar').init();
+//             stellarActivated = true;
+//         }
+//     }
+// }
 
 
 $(document).ready(function () {
     // react_to_window();
-    // $(window).stellar();
 
     var links = $('.navigation').find('li');
     slide = $('.slide');
