@@ -34,7 +34,6 @@ $(document).ready(function () {
     mywindow = $(window);
     htmlbody = $('html,body');
 
-
     //Setup waypoints plugin
     slide.waypoint(function (event, direction) {
 
