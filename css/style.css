@@ -1,0 +1,64 @@
+body {
+	padding-top: 70px; 
+	font-family: 'Raleway', sans-serif;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.hide {
+	display: none;
+}
+
+.inlineBlock {
+	display: inline-block;
+}
+
+.text-content {
+	margin: auto;	
+}
+
+.caption {
+	font-size: 40px;
+	margin: 15px 0px 0px 0px;
+}
+
+.para {
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 35px;
+}
+
+
+#bible-verse {
+	width: 65%;
+	padding: 10px 0px 0px 10px;
+}
+
+#bible-icon {
+	margin-right: 10px;
+	margin-top: -5px;
+	margin-bottom: 0px;
+}
+
+#social-buttons {
+	padding: 7px 20px 5px 0px;
+}
+
+#social-buttons div{
+	background-size: 80px;
+	margin-right: 10px;
+}
+
+#my-photo {
+	border-style: solid;
+	border-radius: 30px;
+
+	margin-right: 5px;
+}
