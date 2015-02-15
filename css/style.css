@@ -7,11 +7,11 @@ p {
 	font-size: 17px;
 }
 
-.floatLeft {
+.float-left {
 	float: left;
 }
 
-.floatRight {
+.float-right {
 	float: right;
 }
 
@@ -19,15 +19,19 @@ p {
 	display: none;
 }
 
-.inlineBlock {
+.inline-block {
 	display: inline-block;
 }
 
 #social-buttons {
-	padding: 7px 20px 5px 0px;
+	padding: 7px 20px 10px 0px;
 }
 
 #social-buttons div{
 	background-size: 80px;
 	margin-right: 10px;
+}
+
+.mini-icons {
+	margin-right: 7px;
 }
