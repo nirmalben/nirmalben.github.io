@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $('#bible-content').hide();
     var links = $('#navbar').find('li');
     
     links.click(function (e) {
@@ -16,6 +16,17 @@ $(document).ready(function () {
         if (hamburgerButton.is(':visible'))
         	hamburgerButton.trigger('click');	// Close the dropdown
         scroll(0,0);
+    });
+
+    $('.toggle-view-btn').click(function (e) {
+        e.preventDefault();
+        if ($('#bible-content').is(':visible')) {
+            $('#bible-content').hide(1000);
+            $(this).text('Show');
+        } else {
+            $('#bible-content').show(1000);
+            $(this).text('Hide');
+        }
     });
 
     $.getScript('https://platform.twitter.com/widgets.js', function() {
