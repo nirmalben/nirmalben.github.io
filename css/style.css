@@ -1,10 +1,36 @@
-body {
-	padding-top: 70px; 
-	font-family: 'Raleway', sans-serif;
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
-p {
-	font-size: 17px;
+body {
+	padding-top: 50px; 
+	font-family: 'Titillium Web', sans-serif;
+	display: table;
+	color:#FFFFFF;
+}
+
+#main-content {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../img/grand-canyon.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-attachment: fixed;
+    background-color: #464646;
+
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 65px;
+    text-shadow: 3px 4px #000000;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url('../img/grand-canyon.jpg');
+  }
 }
 
 .float-left {
@@ -15,23 +41,15 @@ p {
 	float: right;
 }
 
-.hide {
-	display: none;
-}
-
 .inline-block {
 	display: inline-block;
 }
 
 #social-buttons {
-	padding: 7px 20px 10px 0px;
+	padding: 10px 20px 10px 0px;
 }
 
 #social-buttons div{
 	background-size: 80px;
 	margin-right: 10px;
-}
-
-.mini-icons {
-	margin-right: 7px;
 }

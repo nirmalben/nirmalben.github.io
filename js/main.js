@@ -1,5 +1,42 @@
+function updateClock () {
+    var currentTime = new Date ();
+    var currentHours = currentTime.getHours ();
+    var currentMinutes = currentTime.getMinutes ();
+    var currentSeconds = currentTime.getSeconds ();
+
+    currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+    currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+    var timeOfDay = "";
+    if (currentHours < 12) {
+        timeOfDay = "AM";
+    } else if (currentHours > 12) {
+        timeOfDay = "PM";
+    } else if (currentHours == 12 && currentMinutes == 0) {
+        timeOfDay = "Noon";
+    } 
+    currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+    currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+    
+    var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+    
+    $("#dclock").html(currentTimeString);
+
+    var welcomeText = "";
+    if (timeOfDay == "AM") {
+        welcomeText = "Good Morning!";
+    } else {
+        if (currentHours > 12 && currentHours <= 6) {
+            welcomeText = "Good Afternoon!";
+        } else if (currentHours > 6 && currentHours <= 8) {
+            welcomeText = "Good Evening!";
+        } else {
+            welcomeText = "Good Night!";
+        }
+    }
+    $('#texts').html(welcomeText);
+}
+
 $(document).ready(function () {
-    $('#bible-content').hide();
     var links = $('#navbar').find('li');
     var flag = 0;
     
@@ -10,47 +47,5 @@ $(document).ready(function () {
         scroll(0,0);
     });
 
-    $('.toggle-view-btn').click(function (e) {
-        e.preventDefault();
-        if ($('#bible-content').is(':visible')) {
-            $('#bible-content').hide(1000);
-            $(this).text('Show');
-        } else {
-            // Basically, access this function only once
-            if (flag == 0)
-                getlatestTweetText();
-            $('#bible-content').show(1000);
-            $(this).text('Hide');
-        }
-    });
-
-    // Function to get the latest tweet using javascript
-    function getlatestTweetText() {
-        var twitterWidgetIframe = document.getElementById("twitter-widget-0").contentDocument;
-        var latestTweet = (twitterWidgetIframe.getElementsByClassName('stream'))[0].children[0].children[0].children[1].children[0].textContent;
-
-        var latestTweet = $('#twitter-widget-0').find('.twitter-timeline').find('p.e-entry-title').text();
-        var latestTweet = (twitterWidgetIframe.getElementsByClassName('stream'))[0].children[0].children[0].children[1].children[0].textContent;
-
-        if (latestTweet.indexOf("please retweet") != -1 || latestTweet.indexOf("Please retweet") != -1 || latestTweet.indexOf("Please Retweet") != -1 
-            || latestTweet.indexOf("please Retweet") != -1) {
-            latestTweet = latestTweet.substring(0, latestTweet.lastIndexOf("(please")); 
-        } else 
-            latestTweetNoDirectLink = latestTweet;
-
-        var latestTweetNoDirectLink;
-        if (latestTweet.indexOf("http") != -1) {
-            latestTweetNoDirectLink = latestTweet.substring(0, latestTweet.lastIndexOf("http")); 
-        } else 
-            latestTweetNoDirectLink = latestTweet;
-        
-        latestTweetNoDirectLink = "\" " + latestTweetNoDirectLink + "\""
-
-        $('#twitter-feed-latest').text(latestTweetNoDirectLink);
-        $('#twitter-feed-latest').slideDown('slow');
-        $('#twitter-feed-link').removeClass('hide');
-
-        // Basically, access this function only once
-        if (flag==0) flag = 1;
-    }
+    setInterval('updateClock()', 1000);
 });
