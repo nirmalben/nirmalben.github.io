@@ -9,11 +9,12 @@ function updateClock () {
     var timeOfDay = "";
     if (currentHours < 12) {
         timeOfDay = "AM";
-    } else if (currentHours > 12) {
-        timeOfDay = "PM";
     } else if (currentHours == 12 && currentMinutes == 0) {
         timeOfDay = "Noon";
-    } 
+    } else {
+        timeOfDay = "PM";
+    }
+
     currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
     currentHours = ( currentHours == 0 ) ? 12 : currentHours;
     
@@ -25,9 +26,9 @@ function updateClock () {
     if (timeOfDay == "AM") {
         welcomeText = "Good Morning!";
     } else {
-        if (currentHours > 12 && currentHours <= 6) {
+        if (currentHours >= 12 || currentHours <= 4) {
             welcomeText = "Good Afternoon!";
-        } else if (currentHours > 6 && currentHours <= 8) {
+        } else if (currentHours > 4 && currentHours <= 8) {
             welcomeText = "Good Evening!";
         } else {
             welcomeText = "Good Night!";
