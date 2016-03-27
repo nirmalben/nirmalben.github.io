@@ -1,8 +1,8 @@
 function updateClock () {
-    var currentTime = new Date ();
-    var currentHours = currentTime.getHours ();
-    var currentMinutes = currentTime.getMinutes ();
-    var currentSeconds = currentTime.getSeconds ();
+    var currentTime = new Date();
+    var currentHours = currentTime.getHours();
+    var currentMinutes = currentTime.getMinutes();
+    var currentSeconds = currentTime.getSeconds();
 
     currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
     currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
@@ -22,19 +22,72 @@ function updateClock () {
     
     $("#dclock").html(currentTimeString);
 
-    var welcomeText = "";
-    if (timeOfDay == "AM") {
-        welcomeText = "Good Morning!";
-    } else {
-        if (currentHours >= 12 || currentHours <= 4) {
-            welcomeText = "Good Afternoon!";
-        } else if (currentHours > 4 && currentHours <= 8) {
-            welcomeText = "Good Evening!";
-        } else {
-            welcomeText = "Good Night!";
-        }
+    var currentDay = currentTime.getDay();
+    var currentDate = currentTime.getDate();
+    var currentMonth = currentTime.getMonth();
+    var currentYear = currentTime.getFullYear();
+
+    var day = getDayInString(currentDay);
+    var month = getMonthInString(currentMonth);
+    var dateInString = day + ", " + month + " " + currentDate + ", " + currentYear;
+
+    $('#ddate').html(dateInString);
+}
+
+function getMonthInString(month) {
+    var strMonth = ""
+    switch(month){
+        case 0:
+            strMonth = "January"; break;
+        case 1:
+            strMonth = "February"; break;
+        case 2:
+            strMonth = "March"; break;    
+        case 3:
+            strMonth = "April"; break;
+        case 4:
+            strMonth = "May"; break;
+        case 5:
+            strMonth = "June"; break;
+        case 6:
+            strMonth = "July"; break;
+        case 7:
+            strMonth = "August"; break;
+        case 8:
+            strMonth = "September"; break;
+        case 9:
+            strMonth = "October"; break;    
+        case 10:
+            strMonth = "November"; break;
+        case 11:
+            strMonth = "December"; break;
+        default:
+            strMonth = "";
     }
-    $('#texts').html(welcomeText);
+    return strMonth;
+}
+
+function getDayInString(day) {
+    var strDay = ""
+    switch(day){
+        case 0:
+            strDay = "Sunday"; break;
+        case 1:
+            strDay = "Monday"; break;
+        case 2:
+            strDay = "Tuesday"; break;    
+        case 3:
+            strDay = "Wednesday"; break;
+        case 4:
+            strDay = "Thursday"; break;
+        case 5:
+            strDay = "Friday"; break;
+        case 6:
+            strDay = "Saturday"; break;
+        default:
+            strDay = "";
+    }
+    return strDay;
 }
 
 $(document).ready(function () {
