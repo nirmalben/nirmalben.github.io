@@ -1,55 +1,73 @@
-html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
 body {
-	padding-top: 50px; 
-	font-family: 'Titillium Web', sans-serif;
-	display: table;
-	color:#FFFFFF;
-}
-
-#main-content {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../img/grand-canyon.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/pexels-philippedonn-1169754.jpg');
 	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; 
-    background-attachment: fixed;
-    background-color: #464646;
-
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 65px;
-    text-shadow: 3px 4px #000000;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-attachment: fixed;
+	background-color: #464646;
 }
 
-@media only screen and (max-width: 767px) {
-  body {
-    background-image: url('../img/grand-canyon.jpg');
-  }
+.cinzel-600 {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-.float-left {
-	float: left;
+header::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px; /* Adjust height as needed */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+	z-index: -1; /* Ensure it is behind the header content */
 }
 
-.float-right {
-	float: right;
+.nav-text {
+	padding-top: 4px;
 }
 
-.inline-block {
-	display: inline-block;
+.reel-item {
+	background-color: black;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
 }
 
-#social-buttons {
-	padding: 10px 20px 10px 0px;
+video {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
 }
 
-#social-buttons div{
-	background-size: 80px;
-	margin-right: 15px;
+p {
+	margin-top: 10px;
+	font-size: 1rem;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* Mobile-first grid adjustments */
+@media (min-width: 576px) {
+	.reel-item {
+			width: 48%;
+			margin: 1%;
+	}
+}
+
+@media (min-width: 768px) {
+	.reel-item {
+			width: 30%;
+			margin: 1.66%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.reel-item {
+			width: 22%;
+			margin: 1.33%;
+	}
 }
