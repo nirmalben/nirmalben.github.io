@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap" rel="stylesheet">
 
     <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'>
     <link rel='icon' href='img/favicon.ico' type='image/x-icon'>
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 
-<body class="cinzel-600">
+<body class="lexend-deca-500">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #111319; opacity: 0.8;">
         <div class="container">
                 <a class="navbar-brand" href="#">Nirmal Benann</a>
@@ -48,30 +48,20 @@
             </div>
         </div>
     </nav>
-    
     <main class="container mt-4">
         <div class="row justify-content-center">
             <!-- Reel Items Start -->
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 reel-item">
                 <p>New York City on Oct. 10, 2023</p>
-                <video controls>
-                    <source src="vid/newyork-10102023.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe src="https://www.youtube.com/embed/u5mRgXro2gA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 reel-item">
                 <p>Eucharistic Adoration</p>
-                <video controls>
-                    <source src="vid/thursday-night-alive-april.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe src="https://www.youtube.com/embed/TGfMgU4selQ?si=dws_vl56tpk4BsAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 reel-item">
                 <p>Life happens, coconuts help.</p>
-                <video controls>
-                    <source src="vid/coconut-pudding-2.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe src="https://www.youtube.com/embed/Mss5wiwEnB4?si=-LcyI7HVsqvUXKH9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </main>
@@ -81,6 +71,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
+
+        // Disable right-click globally
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+                // Original URLs
+                const originalUrls = [
+            "https://example.com/videos/newyork-10102023.mp4",
+            "https://example.com/videos/thursday-night-alive-april.mov",
+            "https://example.com/videos/coconut-pudding-2.mov"
+        ];
+
+        // Encode the URLs in Base64 using JavaScript
+        const encodedUrls = originalUrls.map(url => btoa(url));
+
+        // Decode and set video sources
+        document.getElementById('video1').src = atob(encodedUrls[0]);
+        document.getElementById('video2').src = atob(encodedUrls[1]);
+        document.getElementById('video3').src = atob(encodedUrls[2]);
     </script>
 </body>
 
