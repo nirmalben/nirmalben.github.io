@@ -92,21 +92,6 @@
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
-
-                // Original URLs
-                const originalUrls = [
-            "https://example.com/videos/newyork-10102023.mp4",
-            "https://example.com/videos/thursday-night-alive-april.mov",
-            "https://example.com/videos/coconut-pudding-2.mov"
-        ];
-
-        // Encode the URLs in Base64 using JavaScript
-        const encodedUrls = originalUrls.map(url => btoa(url));
-
-        // Decode and set video sources
-        document.getElementById('video1').src = atob(encodedUrls[0]);
-        document.getElementById('video2').src = atob(encodedUrls[1]);
-        document.getElementById('video3').src = atob(encodedUrls[2]);
     </script>
 </body>
 
